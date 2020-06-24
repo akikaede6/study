@@ -1,0 +1,7 @@
+#+TITLE: Command
+
+* awk
+** 插入字符
+echo "a b c d" | awk '{$2=$2" e f g";print}'
+** 格式化空白
+awk 'BEGIN{OFS="\t"}"{$1=$1;print}' file.txt #修改 OFS 为一个制表符
